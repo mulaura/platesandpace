@@ -1,6 +1,6 @@
 # Plate & Pace Run
 
-Half-marathon plan + GPS run tracker with a voice coach, for iPhone.
+Run plan + GPS run tracker with a voice coach, for iPhone.
 Everything stays on your phone (no account, no server).
 
 ## Put it on your iPhone (about 10 minutes, once)
