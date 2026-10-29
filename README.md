@@ -1,6 +1,6 @@
 # Plate & Pace Run
 
-Run plan + GPS run tracker with a voice coach, for iPhone.
+Running plans (half marathon or start running) with GPS tracking and a voice coach, plus gym programs (strength for runners, glutes, 12-week calisthenics) with progressive overload and guided circuits, warm-ups and stretching. For iPhone.
 Everything stays on your phone (no account, no server).
 
 ## Put it on your iPhone (about 10 minutes, once)
