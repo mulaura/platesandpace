@@ -1,6 +1,11 @@
 # Plate & Pace Run
 
-Running plans (half marathon or start running) with GPS tracking and a voice coach, plus gym programs (strength for runners, glutes, 12-week calisthenics) with progressive overload and guided circuits, warm-ups and stretching. For iPhone.
+Your training app for iPhone, in English or German.
+- Running plans: Start running (run/walk), 10K faster and further, Half marathon. GPS tracking, a voice coach, and paces set by a 3 km level test.
+- Strength programs: Strength for runners, Glutes, Calisthenics. Each runs 12 weeks, is coached set by set, and progresses automatically.
+- Mobility programs: Learn the split, Improve posture.
+- Guided warm-ups, post-run core and stretching, and a log for other workouts (Pilates, kickboxing, YouTube…).
+Run several plans at once. Pick your days and the app lays out every session.
 Everything stays on your phone (no account, no server).
 
 ## Put it on your iPhone (about 10 minutes, once)
@@ -42,8 +47,10 @@ GitHub Pages does this for free.
 
 ## Updating the app
 
-Replace `index.html` in the repository. Also change `VERSION` in `sw.js`
-(e.g. `pace-v2`) so the phone picks up the new version. Close and reopen the app twice.
+Replace `index.html` and `sw.js` in the repository (`sw.js` carries the version number,
+so the phone notices the update). Then close and reopen the app, twice if needed.
+Updating keeps your log, your current plans and your gym weights.
+Check your plans once in Settings (days, level) after this update.
 
 ## Backup
 
