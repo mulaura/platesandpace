@@ -1,12 +1,13 @@
 // Offline cache for the app shell. Bump VERSION after changing index.html.
-const VERSION = "pace-v21";
+const VERSION = "pace-v23";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icon-180.png", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
   e.respondWith(
-    fetch(e.request).then(res => { const copy = res.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return res; })
+    // always ask the server for the newest file (no stale browser/CDN copy), fall back to the offline cache
+    fetch(new URL(e.request.url).origin === self.location.origin ? new Request(e.request.url, {cache: "no-cache"}) : e.request).then(res => { const copy = res.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return res; })
       .catch(() => caches.match(e.request, { ignoreSearch: true }))
   );
 });
